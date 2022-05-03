@@ -21,10 +21,104 @@
 
 html {
   font-size: 62.5%;
-  font-family: "Barlow", sans-serif;
+  /* font-family: "Barlow", sans-serif; */
   /* font-family: "Fraunces", serif; */
 }
 
 body {
+  font-family: "Barlow", sans-serif;
+
+  margin: 0;
   font-size: 1.5rem;
+}
+
+/* Header ********************************** */
+.header {
+  color: var(--White);
+  padding: 2rem;
+  background: url(./images/mobile/image-header.jpg);
+  min-height: 459px;
+  object-fit: fill;
+  background-size: 100% 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-sunnyside {
+  font-size: 2.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar-links {
+  margin: 0;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  cursor: pointer;
+}
+
+.navbar-links > * {
+  padding: 0.8rem 1.5rem;
+}
+
+.navbar-links > *:hover {
+  background: white;
+  color: var(--dark-blue);
+  border-radius: 2rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.navbar-icon {
+  background: url(./images/icon-hamburger.svg);
+  object-fit: fill;
+  width: 2.1rem;
+  height: 1.8rem;
+  cursor: pointer;
+}
+
+.not-display {
+  display: none;
+}
+
+.main-heading {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  width: 100%;
+  margin: 6rem auto;
+  font-size: 4rem;
+  letter-spacing: 0.4rem;
+  text-align: center;
+}
+
+.main-heading::after {
+  content: "";
+  position: absolute;
+  background: url(./images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: 3rem 10rem;
+  width: 4rem;
+  height: 11rem;
+  left: calc(50% - 2rem);
+  top: 30%;
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    background: url(./images/desktop/image-header.jpg);
+    background-size: 100% 100%;
+  }
+}
+
+main {
+  padding: 2rem;
 }
