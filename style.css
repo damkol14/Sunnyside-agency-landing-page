@@ -380,7 +380,7 @@ h3 {
   }
 
   .orange-picture {
-    background: url(/images/desktop/image-photography.jpg);
+    background: url(./images/desktop/image-photography.jpg);
   }
 }
 
@@ -416,7 +416,7 @@ h3 {
   }
 
   .orange-picture {
-    background: url(/images/desktop/image-photography.jpg);
+    background: url(./images/desktop/image-photography.jpg);
   }
 }
 /* END of Main ********************************** */
