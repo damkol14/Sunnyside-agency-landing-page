@@ -41,10 +41,11 @@ h3 {
   color: var(--White);
   padding: 2rem;
   background: url(./images/mobile/image-header.jpg);
-  min-height: 600px;
+  height: 645px;
   object-fit: cover;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .navbar {
@@ -106,6 +107,65 @@ h3 {
   display: block;
 }
 
+.mobile-menu {
+  background: var(--White);
+  position: absolute;
+  width: 86vw;
+  height: 34rem;
+  z-index: 100;
+  top: 10rem;
+  left: 7vw;
+  text-align: center;
+  padding: 2rem;
+
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: all 0.5s ease-in;
+}
+
+.not-display {
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.mobile-menu::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: var(--White);
+  top: -2rem;
+  right: 0rem;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.mobile-menu-links {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.mobile-menu-link {
+  color: hsla(211, 28%, 19%, 0.719);
+  letter-spacing: 0.15rem;
+  display: inline-block;
+  width: 12rem;
+  padding: 1.3rem 0;
+  margin: 0 auto;
+  border-radius: 5rem;
+  transition: all 0.3s linear;
+}
+
+.mobile-menu-link:active {
+  background: var(--yellow);
+  font-weight: 700;
+}
+
 .main-heading {
   width: 100%;
   margin: 6rem auto;
@@ -124,6 +184,7 @@ h3 {
   height: 11rem;
   left: calc(50% - 2rem);
   top: 320px;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 700px) {
@@ -132,7 +193,11 @@ h3 {
     background-size: 100% 100%;
   }
   .main-heading::after {
-    top: 250px;
+    top: 450px;
+  }
+
+  .mobile-menu {
+    display: none;
   }
 
   .display-big-devices {
@@ -141,6 +206,12 @@ h3 {
 
   .display-small-devices {
     display: none;
+  }
+}
+@media screen and (min-width: 10000px) {
+  .header {
+    min-height: 400px;
+    height: 100vh;
   }
 }
 /* END of Header ********************************** */
@@ -200,6 +271,7 @@ h3 {
   width: 13rem;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 .second-texts {
